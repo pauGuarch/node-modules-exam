@@ -4,10 +4,11 @@ import fs from 'fs';
 export class ManagerFs {
     constructor(_file) {
         //...
+        this.file = _file;
     }
     getData() {
         //...
-
+        return JSON.parse(fs.readFileSync(this.file, "utf-8"));
     }
 }
 
